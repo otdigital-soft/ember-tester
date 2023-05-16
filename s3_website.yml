@@ -1,0 +1,10 @@
+s3_id: <%= ENV['DOCKBIT_AWS_S3_WEBSITE_KEY'] %>
+s3_secret: <%= ENV['DOCKBIT_AWS_S3_WEBSITE_SECRET'] %>
+s3_bucket: <%= ['DockbitExamples', ENV['DOCKBIT_TEAM_NAME'], ENV['DOCKBIT_PIPELINE_NAME']].join('-').downcase %>
+s3_reduced_redundancy: true
+index_document: index.html
+
+gzip:
+  - .html
+  - .css
+  - .js
